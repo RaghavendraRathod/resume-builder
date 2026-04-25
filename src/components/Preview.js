@@ -25,7 +25,7 @@ const Preview = ({ data }) => {
   };
 
 const handlePayment = async () => {
-  const res = await fetch("http://localhost:5000/create-order", {
+  const res = await fetch("https://resume-builder-production-a2e1.up.railway.app/create-order", {
     method: "POST",
   });
 
