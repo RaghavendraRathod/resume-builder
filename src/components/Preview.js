@@ -57,18 +57,18 @@ const handlePayment = async () => {
 };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div className="glass">
       <h2>Preview</h2>
 
       {/* Template Buttons */}
-      <button
+      <button className="button">
         onClick={() => setSelectedTemplate("t1")}
         style={{ marginRight: "10px" }}
       >
         Template 1
       </button>
 
-      <button
+      <button className="button">
         onClick={() => {
           if (!isPro) {
             setShowPopup(true);
@@ -96,7 +96,7 @@ const handlePayment = async () => {
       <br />
 
       {/* Download Button */}
-      <button
+      <button className="button">
         onClick={downloadPDF}
         style={{
           padding: "10px",
@@ -113,27 +113,31 @@ const handlePayment = async () => {
       {/* Popup Modal */}
       {showPopup && (
         <div style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          background: "rgba(0,0,0,0.5)",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}>
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  background: "rgba(0,0,0,0.6)",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  animation: "fadeIn 0.3s ease"
+}}>
           <div style={{
-            background: "white",
-            padding: "30px",
-            borderRadius: "10px",
-            textAlign: "center",
-            width: "300px"
-          }}>
-            <h3>Upgrade to Pro 🚀</h3>
-            <p>Unlock premium templates + better designs</p>
+  background: "linear-gradient(135deg, #1e293b, #0f172a)",
+  padding: "30px",
+  borderRadius: "15px",
+  textAlign: "center",
+  width: "300px",
+  color: "white",
+  boxShadow: "0 20px 50px rgba(0,0,0,0.5)",
+  animation: "scaleIn 0.3s ease"
+}}>
+            <h3>✨ Unlock Premium</h3>
+<p>Modern templates + recruiter-ready design</p>
 
-            <button
+            <button className="button">
               onClick={handlePayment}
               style={{
                 background: "#007bff",

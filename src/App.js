@@ -7,50 +7,55 @@ function App() {
     name: "",
     email: "",
     skills: "",
-    projects: "",
+    projects: ""
+    photo: ""
   });
-return (
-  <div style={{
-    minHeight: "100vh",
-    background: "#f4f6f8",
-    fontFamily: "Arial",
-    padding: "20px"
-  }}>
-    
-    <h2 style={{ textAlign: "center", marginBottom: "20px" }}>
-      Resume Builder
-    </h2>
 
-    <div style={{
-      display: "flex",
-      gap: "30px",
-      justifyContent: "center",
-      alignItems: "flex-start"
-    }}>
-      
-      <div style={{
-        width: "40%",
-        background: "white",
+  const generateSample = () => {
+    setData({
+      name: "Raghavendra Rathod",
+      email: "raghav@example.com",
+      skills: "React, Node.js, SQL, JavaScript",
+      projects:
+        "Built a resume builder using React with PDF export and payment integration."
+    });
+  };
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        height: "100vh",
         padding: "20px",
-        borderRadius: "10px",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
-      }}>
+        gap: "20px"
+      }}
+    >
+      {/* LEFT: FORM */}
+      <div className="glass" style={{ width: "40%" }}>
+        <h2>Enter Details</h2>
+
+        {/* ✅ Smart Button */}
+        <button
+          className="button"
+          onClick={generateSample}
+          style={{ marginBottom: "15px" }}
+        >
+          ✨ Generate Sample Resume
+        </button>
+
+        {/* ✅ Form */}
         <Form data={data} setData={setData} />
       </div>
 
-      <div style={{
-        width: "50%",
-        background: "white",
-        padding: "20px",
-        borderRadius: "10px",
-        boxShadow: "0 2px 10px rgba(0,0,0,0.1)"
-      }}>
+      {/* RIGHT: PREVIEW */}
+      <div
+        className="glass"
+        style={{ width: "60%", overflow: "auto" }}
+      >
         <Preview data={data} />
       </div>
-
     </div>
-  </div>
-);
+  );
 }
 
 export default App;

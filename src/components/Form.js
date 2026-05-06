@@ -13,6 +13,22 @@ const Form = ({ data, setData }) => {
       <h2>Enter Details</h2>
 
       <input
+  type="file"
+  accept="image/*"
+  onChange={(e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+      setData({ ...data, photo: reader.result });
+    };
+
+    if (file) reader.readAsDataURL(file);
+  }}
+/>
+      <br /><br />
+
+      <input
         type="text"
         placeholder="Name"
         value={data.name}
