@@ -7,7 +7,7 @@ function App() {
     name: "",
     email: "",
     skills: "",
-    projects: ""
+    projects: "",
     photo: ""
   });
 
