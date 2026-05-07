@@ -150,11 +150,7 @@ const Preview = ({ data }) => {
 
             <button
               className="button"
-              onClick={() => {
-               setIsPro(true);
-               setShowPopup(false);
-               alert("Premium unlocked 🚀");
-             }}
+              onClick={handlePayment}
               style={{
                 background: "#007bff",
                 color: "white",
