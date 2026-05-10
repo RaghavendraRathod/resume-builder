@@ -22,19 +22,12 @@ function App() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        padding: "20px",
-        gap: "20px"
-      }}
-    >
+    <div className="app-container">
+      
       {/* LEFT: FORM */}
       <div className="glass" style={{ width: "40%" }}>
         <h2>Enter Details</h2>
 
-        {/* ✅ Smart Button */}
         <button
           className="button"
           onClick={generateSample}
@@ -43,7 +36,6 @@ function App() {
           ✨ Generate Sample Resume
         </button>
 
-        {/* ✅ Form */}
         <Form data={data} setData={setData} />
       </div>
 
@@ -54,6 +46,7 @@ function App() {
       >
         <Preview data={data} />
       </div>
+
     </div>
   );
 }
