@@ -25,7 +25,7 @@ function App() {
     <div className="app-container">
       
       {/* LEFT: FORM */}
-      <div className="glass" style={{ width: "40%" }}>
+      <div className="glass" style={{ flex: 1}}>
         <h2>Enter Details</h2>
 
         <button
@@ -42,7 +42,7 @@ function App() {
       {/* RIGHT: PREVIEW */}
       <div
         className="glass"
-        style={{ width: "60%", overflow: "auto" }}
+        style={{ flex: 1.5, overflow: "auto" }}
       >
         <Preview data={data} />
       </div>
