@@ -131,6 +131,7 @@ const Preview = ({ data }) => {
             justifyContent: "center",
             alignItems: "center",
             animation: "fadeIn 0.3s ease",
+            zIndex:9999,
           }}
         >
           <div
