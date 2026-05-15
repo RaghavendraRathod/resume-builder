@@ -144,26 +144,29 @@ const Preview = ({ data }) => {
               color: "white",
               boxShadow: "0 20px 50px rgba(0,0,0,0.5)",
               animation: "scaleIn 0.3s ease",
+              pointerEvents: "auto",
             }}
           >
             <h3>✨ Unlock Premium</h3>
             <p>Modern templates + recruiter-ready design</p>
-
-            <button
-              className="button"
-              onClick={handlePayment}
-              style={{
-                background: "#007bff",
-                color: "white",
-                padding: "10px",
-                border: "none",
-                borderRadius: "5px",
-                marginTop: "10px",
-                cursor: "pointer",
-              }}
-            >
-              Upgrade ₹49
-            </button>
+<button
+  onClick={handlePayment}
+  style={{
+    background: "#007bff",
+    color: "white",
+    padding: "12px 20px",
+    border: "none",
+    borderRadius: "8px",
+    marginTop: "10px",
+    cursor: "pointer",
+    fontWeight: "bold",
+    zIndex: 10000,
+    position: "relative",
+    pointerEvents: "auto",
+  }}
+>
+  Upgrade ₹49
+</button>
 
             <br />
             <br />
